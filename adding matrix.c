@@ -2,32 +2,31 @@
 
 int main()
 {
-    int arr[2][2];
-    int arr1[2][2];
+    // 3x3 matrix needs 3 loops;
+    int arr[3][3];
+    int arr1[3][3];
+    int i, j; // Declare i and j outside of the loops
 
-    for (int i = 0; i < 2; i++)
-    {
-        for (int j = 0; j < 2; j++)
-        {
-            printf("Enter value in a[%d][%d] ", i, j);
+    // Input values for the first matrix (arr)
+    for(i = 0; i < 3; i++) {
+        for(j = 0; j < 3; j++) {
+            printf("Enter value in arr[%d][%d]: ", i, j);
             scanf("%d", &arr[i][j]);
         }
     }
 
-    for (int i = 0; i < 2; i++)
-    {
-        for (int j = 0; j < 2; j++)
-        {
-            printf("Enter value in a[%d][%d] ", i, j);
+    // Input values for the second matrix (arr1)
+    for(i = 0; i < 3; i++) {
+        for(j = 0; j < 3; j++) {
+            printf("Enter value in arr1[%d][%d]: ", i, j);
             scanf("%d", &arr1[i][j]);
         }
     }
-    
 
-    for (int i = 0; i < 2; i++)
-    {
-        for (int j = 0; j < 2; j++)
-        {
+    // Display the sum of corresponding elements of the two matrices
+    printf("Sum of matrices:\n");
+    for(i = 0; i < 3; i++) {
+        for(j = 0; j < 3; j++) {
             printf("%d ", arr[i][j] + arr1[i][j]);
         }
         printf("\n");
@@ -35,4 +34,3 @@ int main()
 
     return 0;
 }
-
